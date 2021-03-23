@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const users = ['a','b','c','d'];
 app.get('/', function (req, res) {
     const fruits ={
         product:'apple',
@@ -10,6 +11,13 @@ app.get('/', function (req, res) {
   })
   app.get('/fruits/apple',(req,res)=>{
        res.send({fruits:'apple',quantity:100,price:10000})
+  })
+  app.get('/user/:id',(req,res)=>{
+      const id = req.params.id;
+      console.log(req.query.sort);
+      const name = users[id];
+      res.send({id,name});
+
   })
   
 app.listen(4000,()=> console.log('Listenting is port 4000'));
