@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const users = ["Abir","Bulbul","Chapman","Dulal"];
+const users = ["Abir","Bulbul","Chapman","Dulal","Fakrul"];
 app.use(cors());
 app.get('/', function (req, res) {
     const fruits ={
